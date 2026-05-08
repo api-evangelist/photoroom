@@ -5,7 +5,7 @@ provider: Photoroom
 providerId: photoroom
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - Image Editing
@@ -13,29 +13,108 @@ tags:
 - E-commerce
 - Visual
 - Plans
-description: Placeholder plans/pricing artifact for Photoroom. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled.
+description: >-
+  Photoroom API has two main paid plans plus enterprise. Basic ($0.02/image) covers Remove
+  Background plus crop/resize. Plus ($0.10/image) adds AI Backgrounds, AI Shadows, image
+  editing, and other GenAI capabilities. One Image Editing call equals five Remove
+  Background calls in billing. Free tier offers 10 Basic images/month plus 1,000 sandbox
+  Image Editing calls/month.
+notes: Reconciled from the public API pricing page (May 2026); enterprise minimum 200K images annual commit.
 sources:
-- https://www.photoroom.com/
+- https://www.photoroom.com/api/pricing
 plans:
-- id: photoroom-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
+- id: photoroom-basic
+  name: Basic Plan
+  type: usage
+  description: Remove Background API access at $0.02 per image plus crop/resize.
   entries:
-  - label: API Access
-    name: api_access
-    type: flat
-    metric: varies
+  - label: Remove Background
+    name: bg_remove
+    type: per_unit
+    metric: image
     limit: -1
     timeFrame: usage
     geo: global
     unit: 1
-    price: see https://www.photoroom.com/
+    price: 0.02 USD/image
     userMultiplied: false
   elements:
-  - name: Pending Reconciliation
+  - name: Crop and resize
+  - name: API dashboard
+- id: photoroom-plus
+  name: Plus Plan
+  type: usage
+  description: Image Editing API at $0.10 per image (1 Plus call = 5 Basic calls in billing).
+  entries:
+  - label: Image Editing
+    name: image_edit
+    type: per_unit
+    metric: image
+    limit: -1
+    timeFrame: usage
+    geo: global
+    unit: 1
+    price: 0.10 USD/image
+    userMultiplied: false
+  elements:
+  - name: AI Backgrounds
+  - name: AI Shadows
+  - name: GenAI editing capabilities
+- id: photoroom-enterprise
+  name: Enterprise
+  type: enterprise
+  description: Volume discounts with 200K image annual minimum, dedicated CSM, beta access.
+  entries:
+  - label: Enterprise Contract
+    name: enterprise
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: annual
+    geo: global
+    unit: 1
+    price: contact sales (200K images/year minimum)
+    userMultiplied: false
+- id: photoroom-api-partner
+  name: API Partner
+  type: subscription
+  description: $0.01/image for consumer-facing apps processing 100K+ images/month (logo display required).
+  entries:
+  - label: Per Image
+    name: partner
+    type: per_unit
+    metric: image
+    limit: -1
+    timeFrame: usage
+    geo: global
+    unit: 1
+    price: 0.01 USD/image
+    userMultiplied: false
+- id: photoroom-free
+  name: Free Tier / Sandbox
+  type: free
+  description: 10 Basic images/month plus 1,000 sandbox Image Editing calls/month.
+  entries:
+  - label: Basic Images
+    name: free_basic
+    type: per_unit
+    metric: image
+    limit: 10
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 0 USD
+    userMultiplied: false
+  - label: Sandbox Image Editing Calls
+    name: free_sandbox
+    type: per_unit
+    metric: call
+    limit: 1000
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 0 USD
+    userMultiplied: false
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

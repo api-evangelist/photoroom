@@ -5,7 +5,7 @@ provider: Photoroom
 providerId: photoroom
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - Image Editing
@@ -15,10 +15,15 @@ tags:
 - FinOps
 - Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Photoroom. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: >-
+  FOCUS-aligned FinOps view of Photoroom. Photoroom uses per-image usage billing across
+  Basic ($0.02) and Plus ($0.10) plans, with Plus calls counted as 5x Basic calls. API
+  Partner programs reduce per-image cost to $0.01 for high-volume consumer apps. Enterprise
+  contracts require 200K image annual minimum.
+notes: Volume threshold to qualify for API Partner ($0.01) is the largest unit-cost lever.
 sources:
-- https://www.photoroom.com/
+- https://www.photoroom.com/api/pricing
+- https://docs.photoroom.com/
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -29,7 +34,7 @@ alignedWith:
 publisherName: Photoroom
 serviceCategory: AI
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Subscription + Per-Image Usage
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
@@ -37,7 +42,7 @@ billingModel:
   - Purchase
   - Adjustment
 focusColumns:
-  ServiceName: Photoroom
+  ServiceName: Photoroom API
   ServiceCategory: AI
   ProviderName: Photoroom
   PublisherName: Photoroom
@@ -45,22 +50,34 @@ focusColumns:
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: bg_remove_images
+  description: Remove Background API images at $0.02 each (Basic).
+  unit: image
   aggregation: sum
   dimensions:
   - account
-  - resource
+- name: image_edit_calls
+  description: Image Editing API calls at $0.10 each (Plus).
+  unit: image
+  aggregation: sum
+  dimensions:
+  - account
+  - operation
+- name: api_partner_images
+  description: API Partner program calls at $0.01 each (qualifying consumer apps).
+  unit: image
+  aggregation: sum
+  dimensions:
+  - account
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Track per-API call counts via Photoroom API dashboard.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: Tag calls to product/marketplace use case.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Use Basic plan for plain background removal; reserve Plus for AI Backgrounds and Shadows. Negotiate API Partner if volume qualifies.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Assign budget owner per product surface that consumes Photoroom.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

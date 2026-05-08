@@ -5,7 +5,7 @@ provider: Photoroom
 providerId: photoroom
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: partial
 tags:
 - AI
 - Image Editing
@@ -15,21 +15,34 @@ tags:
 - Rate Limiting
 - Quotas
 - Throttling
-description: Placeholder rate-limit artifact for Photoroom. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: >-
+  Photoroom rate-limits primarily through plan-based image quotas (paid plans are usage-billed
+  per image; free tier gives 10 basic + 1,000 sandbox calls/month). Specific HTTP RPS caps
+  are not publicly documented. Sandbox mode supports unlimited testing.
+notes: Plan-based image budget is the primary control mechanism; HTTP RPS caps not public.
 sources:
-- https://www.photoroom.com/
+- https://www.photoroom.com/api/pricing
+- https://docs.photoroom.com/
 responseCodes:
   throttled: 429
 limits:
-- name: Default
+- name: Free Basic Images / Month
   scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  metric: images
+  limit: 10
+- name: Free Sandbox Image Editing Calls / Month
+  scope: account
+  metric: calls
+  limit: 1000
+- name: HTTP Requests
+  scope: account
+  metric: requests
+  limit: not publicly documented
 policies:
 - name: Backoff Strategy
   description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+- name: Sandbox Testing
+  description: Use sandbox mode to validate integrations without consuming production credits.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
