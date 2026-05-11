@@ -56,6 +56,30 @@ common:
     url: rate-limits/photoroom-rate-limits.yml
   - type: FinOps
     url: finops/photoroom-finops.yml
+  - type: Integrations
+    url: https://www.photoroom.com/integrations
+integrations:
+  - name: Background remover
+  - name: Image generator
+  - name: Virtual model
+  - name: Product staging
+  - name: Background generator
+  - name: Logo maker
+  - name: Resize and expand
+  - name: Remove objects
+  - name: Product shadows
+  - name: Change background color
+  - name: Ghost Mannequin New
+  - name: Flat Lay New
+  - name: Product Beautifier
+  - name: Unwrinkle clothes New
+  - name: Edit with AI New
+  - name: White Background
+  - name: Blur Background
+  - name: Product Video Generator New
+  - name: Recolor clothing
+  - name: Transparent background
+  - name: Bulk resizing
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
