@@ -1,7 +1,7 @@
 aid: photoroom
 url: https://raw.githubusercontent.com/api-evangelist/photoroom/refs/heads/main/apis.yml
 name: Photoroom
-x-type: company
+kind: company
 description: >-
   Photoroom is an AI image editing platform with strong background removal and
   e-commerce-style product photo generation. Public APIs include the Remove Background API
