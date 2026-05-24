@@ -60,6 +60,8 @@ common:
     url: finops/photoroom-finops.yml
   - type: Integrations
     url: https://www.photoroom.com/integrations
+  - type: LLMsTxt
+    url: https://docs.photoroom.com/llms.txt
 integrations:
   - name: Background remover
   - name: Image generator
