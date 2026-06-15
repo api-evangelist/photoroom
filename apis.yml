@@ -2,10 +2,11 @@ aid: photoroom
 url: https://raw.githubusercontent.com/api-evangelist/photoroom/refs/heads/main/apis.yml
 name: Photoroom
 kind: company
-description: Photoroom is an AI image editing platform with strong background removal and e-commerce-style product photo generation.
-  Public APIs include the Remove Background API and the Image Editing API (Plus plan), with specialized endpoints for PhotoFix,
-  Reposition, Product Beautifier, Analyze QA, Image to Video, Photo Composition, Virtual Model, Flat Lay, and Ghost Mannequin.
-  OpenAPI spec is published.
+description: >-
+  Photoroom is an AI image editing platform with strong background removal and e-commerce-style product photo
+  generation. Public APIs include the Remove Background API and the Image Editing API (Plus plan), with specialized
+  endpoints for PhotoFix, Reposition, Product Beautifier, Analyze QA, Image to Video, Photo Composition, Virtual Model,
+  Flat Lay, and Ghost Mannequin. OpenAPI spec is published.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - AI
@@ -19,28 +20,27 @@ specificationVersion: '0.19'
 apis:
   - aid: photoroom:platform
     name: Photoroom API
-    description: REST API for background removal, AI image editing, AI shadows, AI backgrounds, product reposition, virtual
-      model, ghost mannequin, photo composition, and image to video. Authenticated by API key obtained from the Photoroom API
+    description: >-
+      REST API for background removal, AI image editing, AI shadows, AI backgrounds, product reposition, virtual model,
+      ghost mannequin, photo composition, and image to video. Authenticated by API key obtained from the Photoroom API
       Dashboard. OpenAPI published at https://image-api.photoroom.com/openapi.
     image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://docs.photoroom.com/
     baseURL: https://image-api.photoroom.com
     tags:
-    - Image Editing
-    - Background Removal
-    - E-commerce
-    - Product Photography
+      - Image Editing
+      - Background Removal
+      - E-commerce
+      - Product Photography
     properties:
-    - type: Documentation
-      url: https://docs.photoroom.com/
-    - type: OpenAPI
-      url: openapi/photoroom-openapi.yml
-    - type: SignUp
-      url: https://app.photoroom.com/api-dashboard
-    - type: Pricing
-      url: https://www.photoroom.com/api/pricing
-    - type: NaftikoCapability
-      url: capabilities/photoroom.yaml
+      - type: Documentation
+        url: https://docs.photoroom.com/
+      - type: OpenAPI
+        url: openapi/photoroom-openapi.yml
+      - type: SignUp
+        url: https://app.photoroom.com/api-dashboard
+      - type: Pricing
+        url: https://www.photoroom.com/api/pricing
 common:
   - type: GitHubOrganization
     url: https://github.com/Photoroom
