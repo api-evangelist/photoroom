@@ -7,7 +7,7 @@ description: >-
   generation. Public APIs include the Remove Background API and the Image Editing API (Plus plan), with specialized
   endpoints for PhotoFix, Reposition, Product Beautifier, Analyze QA, Image to Video, Photo Composition, Virtual Model,
   Flat Lay, and Ghost Mannequin. OpenAPI spec is published.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - Image Editing
@@ -24,7 +24,7 @@ apis:
       REST API for background removal, AI image editing, AI shadows, AI backgrounds, product reposition, virtual model,
       ghost mannequin, photo composition, and image to video. Authenticated by API key obtained from the Photoroom API
       Dashboard. OpenAPI published at https://image-api.photoroom.com/openapi.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.photoroom.com/
     baseURL: https://image-api.photoroom.com
     tags:
