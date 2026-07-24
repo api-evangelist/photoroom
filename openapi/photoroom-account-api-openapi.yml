@@ -1,0 +1,165 @@
+openapi: 3.1.0
+info:
+  title: Photoroom Account API
+  version: 1.0.0
+  description: 'The Photoroom API takes an image as input, applies edits (background removal, AI backgrounds, shadows, relighting, text removal, flat lay, ghost mannequin, virtual model, and more), and returns the edited image.
+
+
+    For tested parameter combinations for common use cases, see our tutorials before building your integration:
+
+    - Second-hand marketplace listings: https://docs.photoroom.com/tutorials/how-to-improve-images-for-second-hand-item-marketplaces
+
+    - E-commerce with brand consistency: https://docs.photoroom.com/tutorials/how-to-create-e-commerce-images-with-consistent-brand-guidelines
+
+    - Food delivery apps: https://docs.photoroom.com/tutorials/how-to-create-food-delivery-images-with-consistent-brand-guidelines
+
+    - Google Shopping compliance: https://docs.photoroom.com/tutorials/how-to-create-compliant-product-images-for-google-shopping
+
+    - Sticker images: https://docs.photoroom.com/tutorials/how-to-create-sticker-images
+
+
+    To use the API, you need an API key. Create one at https://app.photoroom.com/api-dashboard. The key must be passed in the x-api-key header on every request.
+
+
+    Full documentation: https://docs.photoroom.com'
+  contact:
+    name: Photoroom API Team
+    email: api-help@photorom.com
+    url: https://photoroom.com/api
+  termsOfService: https://www.photoroom.com/legal/terms-and-conditions
+security:
+- x-api-key: []
+tags:
+- name: Account
+paths:
+  /v1/account:
+    get:
+      operationId: account-details-v1
+      summary: Account Details v1
+      description: Get current account details, including remaining credits balance and monthly quota
+      servers:
+      - url: https://image-api.photoroom.com
+        description: Production server (Plus plan)
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  credits:
+                    type: object
+                    properties:
+                      available:
+                        type: number
+                        description: The number of credits available
+                        title: Available
+                        example: 100
+                      subscription:
+                        type: number
+                        description: The number of credits available in the subscription
+                        title: Subscription
+                        example: 100
+                        minimum: 0
+                    required:
+                    - available
+                    - subscription
+                required:
+                - credits
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        description: The message describing the error
+                        title: Message
+                        example: 'apiKey: Required'
+                    required:
+                    - message
+                required:
+                - error
+                title: Field Missing Error
+        '403':
+          description: Forbidden
+      tags:
+      - Account
+  /v2/account:
+    get:
+      operationId: account-details-v2
+      summary: Account Details v2
+      description: Get current account details, including remaining image edits and monthly quota
+      servers:
+      - url: https://image-api.photoroom.com
+        description: Production server (Plus plan)
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  images:
+                    type: object
+                    properties:
+                      available:
+                        type: number
+                        description: The number of images available
+                        title: Available
+                        example: 100
+                      subscription:
+                        type: number
+                        description: The total number of image available in the subscription
+                        title: Subscription
+                        example: 100
+                        minimum: 0
+                    required:
+                    - available
+                    - subscription
+                  plan:
+                    type: string
+                    description: The name of the pricing plan
+                    title: Plan
+                    example: basic
+                required:
+                - images
+                - plan
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        description: The message describing the error
+                        title: Message
+                        example: 'apiKey: Required'
+                    required:
+                    - message
+                required:
+                - error
+                title: Field Missing Error
+        '403':
+          description: Forbidden
+      tags:
+      - Account
+components:
+  securitySchemes:
+    x-api-key:
+      type: apiKey
+      name: x-api-key
+      in: header
+      description: Get you API Key [here](https://app.photoroom.com/api-dashboard)

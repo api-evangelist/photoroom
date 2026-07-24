@@ -1,0 +1,285 @@
+openapi: 3.1.0
+info:
+  title: Photoroom Account Render API
+  version: 1.0.0
+  description: 'The Photoroom API takes an image as input, applies edits (background removal, AI backgrounds, shadows, relighting, text removal, flat lay, ghost mannequin, virtual model, and more), and returns the edited image.
+
+
+    For tested parameter combinations for common use cases, see our tutorials before building your integration:
+
+    - Second-hand marketplace listings: https://docs.photoroom.com/tutorials/how-to-improve-images-for-second-hand-item-marketplaces
+
+    - E-commerce with brand consistency: https://docs.photoroom.com/tutorials/how-to-create-e-commerce-images-with-consistent-brand-guidelines
+
+    - Food delivery apps: https://docs.photoroom.com/tutorials/how-to-create-food-delivery-images-with-consistent-brand-guidelines
+
+    - Google Shopping compliance: https://docs.photoroom.com/tutorials/how-to-create-compliant-product-images-for-google-shopping
+
+    - Sticker images: https://docs.photoroom.com/tutorials/how-to-create-sticker-images
+
+
+    To use the API, you need an API key. Create one at https://app.photoroom.com/api-dashboard. The key must be passed in the x-api-key header on every request.
+
+
+    Full documentation: https://docs.photoroom.com'
+  contact:
+    name: Photoroom API Team
+    email: api-help@photorom.com
+    url: https://photoroom.com/api
+  termsOfService: https://www.photoroom.com/legal/terms-and-conditions
+security:
+- x-api-key: []
+tags:
+- name: Render
+paths:
+  /v1/render:
+    get:
+      operationId: edit-image-get
+      summary: '[LEGACY] Image Editing v1 (Plus plan)'
+      description: 'Deprecated: use /v2/edit instead.
+
+
+        This is a legacy endpoint, it is not recommended for new integrations.
+
+
+        For new integrations, please use /v2/edit which offers all the same functionalities, plus additional AI features.'
+      servers:
+      - url: https://image-api.photoroom.com
+        description: Production server (Plus plan)
+      parameters:
+      - schema:
+          type: string
+          title: API Key
+          description: The API key to authenticate the request
+          example: 4a5b60936c3a934hqb3cf5838b390dc3d4dfc9da
+        required: false
+        description: The API key to authenticate the request
+        name: apiKey
+        in: query
+      - schema:
+          type: string
+          description: The ID of the template to render
+          title: Template ID
+          example: 592dd982-4a1b-4cd9-ab11-21481d5a0064
+        required: true
+        description: The ID of the template to render
+        name: templateId
+        in: query
+      - schema:
+          type: string
+          format: uri
+          title: Image URL
+          description: The image URL to render
+          example: https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png
+        required: false
+        description: The image URL to render
+        name: imageUrl
+        in: query
+      - schema:
+          type: string
+          format: uri
+          title: Concept URL
+          description: Deprecated, use `imageUrl` instead.
+          example: https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png
+          deprecated: true
+        required: false
+        description: Deprecated, use `imageUrl` instead.
+        name: conceptUrl
+        in: query
+      responses:
+        '200':
+          description: OK
+          content:
+            image/png:
+              schema:
+                type: string
+                title: Resulting image
+                description: The resulting image after rendering
+                format: binary
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        description: The message describing the error
+                        title: Message
+                        example: 'imageUrl: must be provided'
+                    required:
+                    - message
+                required:
+                - error
+                title: Field Missing Error
+        '402':
+          description: Payment Required
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      detail:
+                        type: string
+                        description: The details of the error
+                        title: Details
+                        example: API credits exhausted. Visit https://app.photoroom.com/api-dashboard to purchase more API credits
+                    required:
+                    - detail
+                required:
+                - error
+                title: Payment Error
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        description: The message describing the error
+                        title: Message
+                        example: An unexpected error occurred. Please try again later or contact support.
+                    required:
+                    - message
+                required:
+                - error
+                title: Unknown Error
+      tags:
+      - Render
+    post:
+      operationId: edit-image-post
+      summary: '[LEGACY] Image Editing v1 (Plus plan)'
+      description: 'Deprecated: use /v2/edit instead.
+
+
+        This is a legacy endpoint, it is not recommended for new integrations.
+
+
+        For new integrations, please use /v2/edit which offers all the same functionalities, plus additional AI features.'
+      servers:
+      - url: https://image-api.photoroom.com
+        description: Production server (Plus plan)
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/render-image-post-params'
+      responses:
+        '200':
+          description: OK
+          content:
+            image/png:
+              schema:
+                type: string
+                title: Resulting image
+                description: The resulting image after rendering
+                format: binary
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        description: The message describing the error
+                        title: Message
+                        example: 'imageFile: must be provided'
+                    required:
+                    - message
+                required:
+                - error
+                title: Field Missing Error
+        '402':
+          description: Payment Required
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      detail:
+                        type: string
+                        description: The details of the error
+                        title: Details
+                        example: API credits exhausted. Visit https://app.photoroom.com/api-dashboard to purchase more API credits
+                    required:
+                    - detail
+                required:
+                - error
+                title: Payment Error
+        '403':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        description: The message describing the error
+                        title: Message
+                        example: An unexpected error occurred. Please try again later or contact support.
+                    required:
+                    - message
+                required:
+                - error
+                title: Unknown Error
+      tags:
+      - Render
+components:
+  schemas:
+    render-image-post-params:
+      type: object
+      properties:
+        templateId:
+          type: string
+          description: The ID of the template to render
+          title: Template ID
+          example: 592dd982-4a1b-4cd9-ab11-21481d5a0064
+        imageFile:
+          type: string
+          description: The image file to render
+          title: Image File
+          format: binary
+        imageUrl:
+          type: string
+          format: uri
+          title: Image URL
+          description: Deprecated, use `imageFile` instead.
+          example: https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png
+          deprecated: true
+      required:
+      - templateId
+      title: Render image POST params
+  securitySchemes:
+    x-api-key:
+      type: apiKey
+      name: x-api-key
+      in: header
+      description: Get you API Key [here](https://app.photoroom.com/api-dashboard)

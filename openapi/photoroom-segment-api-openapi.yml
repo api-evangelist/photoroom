@@ -1,0 +1,196 @@
+openapi: 3.1.0
+info:
+  title: Photoroom Account Segment API
+  version: 1.0.0
+  description: 'The Photoroom API takes an image as input, applies edits (background removal, AI backgrounds, shadows, relighting, text removal, flat lay, ghost mannequin, virtual model, and more), and returns the edited image.
+
+
+    For tested parameter combinations for common use cases, see our tutorials before building your integration:
+
+    - Second-hand marketplace listings: https://docs.photoroom.com/tutorials/how-to-improve-images-for-second-hand-item-marketplaces
+
+    - E-commerce with brand consistency: https://docs.photoroom.com/tutorials/how-to-create-e-commerce-images-with-consistent-brand-guidelines
+
+    - Food delivery apps: https://docs.photoroom.com/tutorials/how-to-create-food-delivery-images-with-consistent-brand-guidelines
+
+    - Google Shopping compliance: https://docs.photoroom.com/tutorials/how-to-create-compliant-product-images-for-google-shopping
+
+    - Sticker images: https://docs.photoroom.com/tutorials/how-to-create-sticker-images
+
+
+    To use the API, you need an API key. Create one at https://app.photoroom.com/api-dashboard. The key must be passed in the x-api-key header on every request.
+
+
+    Full documentation: https://docs.photoroom.com'
+  contact:
+    name: Photoroom API Team
+    email: api-help@photorom.com
+    url: https://photoroom.com/api
+  termsOfService: https://www.photoroom.com/legal/terms-and-conditions
+security:
+- x-api-key: []
+tags:
+- name: Segment
+paths:
+  /v1/segment:
+    post:
+      operationId: remove-background
+      summary: Remove Background (Basic plan)
+      description: Remove background from an image
+      servers:
+      - url: https://sdk.photoroom.com
+        description: Production server (Basic plan)
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/remove-background-post-params'
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-uncertainty-score:
+              schema:
+                summary: The uncertainty score of the cutout
+                description: The uncertainty score is a number between 0 and 1. 0 means the model is very confident that the cutout is accurate, 1 means the model is unsure. For instance, shoes on a shoe box might give a higher uncertainty score as the model is unsure what to segment (shoes, box or both). Currently the model returns an uncertainty score only for images of objects. If an image contains humans, it will return the value -1.
+          content:
+            image/png:
+              schema:
+                type: string
+                title: Resulting image
+                description: The resulting image after rendering
+                format: binary
+            application/json:
+              schema:
+                type: object
+                properties:
+                  base64img:
+                    type: string
+                    title: Base64 encoded image
+                    format: base64
+                required:
+                - base64img
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  detail:
+                    type: string
+                    description: The details of the error
+                    title: Details
+                    example: Please provide an image.
+                  status_code:
+                    type: number
+                    description: The status code of the error
+                    title: Status Code
+                    example: 400
+                  type:
+                    type: string
+                    description: The type of the error
+                    title: Type
+                    example: missing_image
+                required:
+                - detail
+                - status_code
+                - type
+                title: Field Missing Error
+        '402':
+          description: Payment Required
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  detail:
+                    type: string
+                    description: The details of the error
+                    title: Details
+                    example: Please provide an image.
+                  status_code:
+                    type: number
+                    description: The status code of the error
+                    title: Status Code
+                    example: 400
+                  type:
+                    type: string
+                    description: The type of the error
+                    title: Type
+                    example: missing_image
+                required:
+                - detail
+                - status_code
+                - type
+                title: Field Missing Error
+        '403':
+          description: Forbidden
+      tags:
+      - Segment
+components:
+  schemas:
+    remove-background-post-params:
+      type: object
+      properties:
+        image_file:
+          type: string
+          description: The image file to render
+          title: Image File
+          format: binary
+        format:
+          type: string
+          default: png
+          title: Format
+          description: The format of the resulting image
+          enum:
+          - png
+          - jpg
+          - webp
+        channels:
+          type: string
+          default: rgba
+          title: Channels
+          description: The channels of the resulting image
+          enum:
+          - rgba
+          - alpha
+        bg_color:
+          type: string
+          title: Background Color
+          description: The background color of the resulting image. Can be a hex code (`#FF00FF`) or a HTML color (`red`, `green`, etc.)
+        size:
+          type: string
+          default: full
+          title: Size
+          description: Will resize the output to the specified size. Can be `preview` (0.25 Megapixels), `medium` (1.5 MP), `hd` (4 MP) or `full` (36 MP, can be slower for large images). Useful for mobile apps that need smaller images.
+          enum:
+          - preview
+          - medium
+          - hd
+          - full
+        crop:
+          type: string
+          default: 'false'
+          title: Crop
+          description: If `true`, the image returned is cropped to the cutout border. Transparent pixels are removed from the border
+          enum:
+          - 'true'
+          - 'false'
+        despill:
+          type: string
+          default: 'false'
+          title: Green screen despilling
+          description: If `true`, automatically removes colored reflections that have been left on the main subject by a green background.
+          enum:
+          - 'true'
+          - 'false'
+      required:
+      - image_file
+      title: Remove Background POST params
+  securitySchemes:
+    x-api-key:
+      type: apiKey
+      name: x-api-key
+      in: header
+      description: Get you API Key [here](https://app.photoroom.com/api-dashboard)
