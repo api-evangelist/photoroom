@@ -7,7 +7,20 @@ description: >-
   generation. Public APIs include the Remove Background API and the Image Editing API (Plus plan), with specialized
   endpoints for PhotoFix, Reposition, Product Beautifier, Analyze QA, Image to Video, Photo Composition, Virtual Model,
   Flat Lay, and Ghost Mannequin. OpenAPI spec is published.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/photoroom.png
 tags:
   - AI
   - Image Editing
@@ -18,29 +31,70 @@ created: '2026-05-08'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: photoroom:platform
-    name: Photoroom API
-    description: >-
-      REST API for background removal, AI image editing, AI shadows, AI backgrounds, product reposition, virtual model,
-      ghost mannequin, photo composition, and image to video. Authenticated by API key obtained from the Photoroom API
-      Dashboard. OpenAPI published at https://image-api.photoroom.com/openapi.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://docs.photoroom.com/
-    baseURL: https://image-api.photoroom.com
-    tags:
-      - Image Editing
-      - Background Removal
-      - E-commerce
-      - Product Photography
-    properties:
-      - type: Documentation
-        url: https://docs.photoroom.com/
-      - type: OpenAPI
-        url: openapi/photoroom-openapi.yml
-      - type: Signup
-        url: https://app.photoroom.com/api-dashboard
-      - type: Pricing
-        url: https://www.photoroom.com/api/pricing
+- aid: photoroom:photoroom-account-api
+  name: Photoroom Account API
+  description: The Account API from Photoroom — 2 operation(s) for account.
+  humanURL: https://docs.photoroom.com/
+  baseURL: https://image-api.photoroom.com
+  tags:
+  - Account
+  properties:
+  - type: OpenAPI
+    url: openapi/photoroom-account-api-openapi.yml
+  - type: Documentation
+    url: https://docs.photoroom.com/
+  - type: Signup
+    url: https://app.photoroom.com/api-dashboard
+  - type: Pricing
+    url: https://www.photoroom.com/api/pricing
+- aid: photoroom:photoroom-edit-api
+  name: Photoroom Edit API
+  description: The Edit API from Photoroom — 1 operation(s) for edit.
+  humanURL: https://docs.photoroom.com/
+  baseURL: https://image-api.photoroom.com
+  tags:
+  - Edit
+  properties:
+  - type: OpenAPI
+    url: openapi/photoroom-edit-api-openapi.yml
+  - type: Documentation
+    url: https://docs.photoroom.com/
+  - type: Signup
+    url: https://app.photoroom.com/api-dashboard
+  - type: Pricing
+    url: https://www.photoroom.com/api/pricing
+- aid: photoroom:photoroom-render-api
+  name: Photoroom Render API
+  description: The Render API from Photoroom — 1 operation(s) for render.
+  humanURL: https://docs.photoroom.com/
+  baseURL: https://image-api.photoroom.com
+  tags:
+  - Render
+  properties:
+  - type: OpenAPI
+    url: openapi/photoroom-render-api-openapi.yml
+  - type: Documentation
+    url: https://docs.photoroom.com/
+  - type: Signup
+    url: https://app.photoroom.com/api-dashboard
+  - type: Pricing
+    url: https://www.photoroom.com/api/pricing
+- aid: photoroom:photoroom-segment-api
+  name: Photoroom Segment API
+  description: The Segment API from Photoroom — 1 operation(s) for segment.
+  humanURL: https://docs.photoroom.com/
+  baseURL: https://image-api.photoroom.com
+  tags:
+  - Segment
+  properties:
+  - type: OpenAPI
+    url: openapi/photoroom-segment-api-openapi.yml
+  - type: Documentation
+    url: https://docs.photoroom.com/
+  - type: Signup
+    url: https://app.photoroom.com/api-dashboard
+  - type: Pricing
+    url: https://www.photoroom.com/api/pricing
 common:
   - type: AgenticAccess
     url: agentic-access/photoroom-agentic-access.yml
