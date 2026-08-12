@@ -111,7 +111,7 @@ common:
   - type: Documentation
     url: https://docs.photoroom.com/
   - type: OpenAPI
-    url: openapi/photoroom-openapi.yml
+    url: openapi/_original/photoroom-openapi.yml
   - type: Plans
     url: plans/photoroom-plans-pricing.yml
   - type: RateLimits
