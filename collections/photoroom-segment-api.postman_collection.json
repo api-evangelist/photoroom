@@ -1,0 +1,596 @@
+{
+  "item": [
+    {
+      "id": "57370bd5-8714-4092-9c4d-9263f532272b",
+      "name": "Segment",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a5414ebd-35c5-41b8-b26e-419523c5efde",
+          "name": "Remove Background (Basic plan)",
+          "request": {
+            "name": "Remove Background (Basic plan)",
+            "description": {
+              "content": "Remove background from an image",
+              "type": "text/plain"
+            },
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v1",
+                "segment"
+              ],
+              "host": [
+                "sdk",
+                "photoroom",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "image/png"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image_file",
+                  "type": "file",
+                  "description": "(Required) The image file to render"
+                },
+                {
+                  "key": "format",
+                  "value": "png",
+                  "type": "text",
+                  "description": "The format of the resulting image (This can only be one of png,jpg,webp)"
+                },
+                {
+                  "key": "channels",
+                  "value": "rgba",
+                  "type": "text",
+                  "description": "The channels of the resulting image (This can only be one of rgba,alpha)"
+                },
+                {
+                  "key": "bg_color",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "The background color of the resulting image. Can be a hex code (`#FF00FF`) or a HTML color (`red`, `green`, etc.)"
+                },
+                {
+                  "key": "size",
+                  "value": "full",
+                  "type": "text",
+                  "description": "Will resize the output to the specified size. Can be `preview` (0.25 Megapixels), `medium` (1.5 MP), `hd` (4 MP) or `full` (36 MP, can be slower for large images). Useful for mobile apps that need smaller images. (This can only be one of preview,medium,hd,full)"
+                },
+                {
+                  "key": "crop",
+                  "value": "false",
+                  "type": "text",
+                  "description": "If `true`, the image returned is cropped to the cutout border. Transparent pixels are removed from the border (This can only be one of true,false)"
+                },
+                {
+                  "key": "despill",
+                  "value": "false",
+                  "type": "text",
+                  "description": "If `true`, automatically removes colored reflections that have been left on the main subject by a green background. (This can only be one of true,false)"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "30e88ca7-5013-4254-97ad-74f9f89fcda7",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "segment"
+                  ],
+                  "host": [
+                    "sdk",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "image/png"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) The image file to render",
+                        "type": "text/plain"
+                      },
+                      "key": "image_file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The format of the resulting image (This can only be one of png,jpg,webp)",
+                        "type": "text/plain"
+                      },
+                      "key": "format",
+                      "value": "png",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The channels of the resulting image (This can only be one of rgba,alpha)",
+                        "type": "text/plain"
+                      },
+                      "key": "channels",
+                      "value": "rgba",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The background color of the resulting image. Can be a hex code (`#FF00FF`) or a HTML color (`red`, `green`, etc.)",
+                        "type": "text/plain"
+                      },
+                      "key": "bg_color",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Will resize the output to the specified size. Can be `preview` (0.25 Megapixels), `medium` (1.5 MP), `hd` (4 MP) or `full` (36 MP, can be slower for large images). Useful for mobile apps that need smaller images. (This can only be one of preview,medium,hd,full)",
+                        "type": "text/plain"
+                      },
+                      "key": "size",
+                      "value": "full",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "If `true`, the image returned is cropped to the cutout border. Transparent pixels are removed from the border (This can only be one of true,false)",
+                        "type": "text/plain"
+                      },
+                      "key": "crop",
+                      "value": "false",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "If `true`, automatically removes colored reflections that have been left on the main subject by a green background. (This can only be one of true,false)",
+                        "type": "text/plain"
+                      },
+                      "key": "despill",
+                      "value": "false",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "x-uncertainty-score",
+                  "value": "",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"base64img\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dbeaa486-027d-4b5e-a608-89d6e407f911",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "segment"
+                  ],
+                  "host": [
+                    "sdk",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) The image file to render",
+                        "type": "text/plain"
+                      },
+                      "key": "image_file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The format of the resulting image (This can only be one of png,jpg,webp)",
+                        "type": "text/plain"
+                      },
+                      "key": "format",
+                      "value": "png",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The channels of the resulting image (This can only be one of rgba,alpha)",
+                        "type": "text/plain"
+                      },
+                      "key": "channels",
+                      "value": "rgba",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The background color of the resulting image. Can be a hex code (`#FF00FF`) or a HTML color (`red`, `green`, etc.)",
+                        "type": "text/plain"
+                      },
+                      "key": "bg_color",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Will resize the output to the specified size. Can be `preview` (0.25 Megapixels), `medium` (1.5 MP), `hd` (4 MP) or `full` (36 MP, can be slower for large images). Useful for mobile apps that need smaller images. (This can only be one of preview,medium,hd,full)",
+                        "type": "text/plain"
+                      },
+                      "key": "size",
+                      "value": "full",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "If `true`, the image returned is cropped to the cutout border. Transparent pixels are removed from the border (This can only be one of true,false)",
+                        "type": "text/plain"
+                      },
+                      "key": "crop",
+                      "value": "false",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "If `true`, automatically removes colored reflections that have been left on the main subject by a green background. (This can only be one of true,false)",
+                        "type": "text/plain"
+                      },
+                      "key": "despill",
+                      "value": "false",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": \"Please provide an image.\",\n  \"status_code\": 400,\n  \"type\": \"missing_image\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "36e524dc-8b8c-4da3-bffe-5c394ce8ea54",
+              "name": "Payment Required",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "segment"
+                  ],
+                  "host": [
+                    "sdk",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) The image file to render",
+                        "type": "text/plain"
+                      },
+                      "key": "image_file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The format of the resulting image (This can only be one of png,jpg,webp)",
+                        "type": "text/plain"
+                      },
+                      "key": "format",
+                      "value": "png",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The channels of the resulting image (This can only be one of rgba,alpha)",
+                        "type": "text/plain"
+                      },
+                      "key": "channels",
+                      "value": "rgba",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The background color of the resulting image. Can be a hex code (`#FF00FF`) or a HTML color (`red`, `green`, etc.)",
+                        "type": "text/plain"
+                      },
+                      "key": "bg_color",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Will resize the output to the specified size. Can be `preview` (0.25 Megapixels), `medium` (1.5 MP), `hd` (4 MP) or `full` (36 MP, can be slower for large images). Useful for mobile apps that need smaller images. (This can only be one of preview,medium,hd,full)",
+                        "type": "text/plain"
+                      },
+                      "key": "size",
+                      "value": "full",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "If `true`, the image returned is cropped to the cutout border. Transparent pixels are removed from the border (This can only be one of true,false)",
+                        "type": "text/plain"
+                      },
+                      "key": "crop",
+                      "value": "false",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "If `true`, automatically removes colored reflections that have been left on the main subject by a green background. (This can only be one of true,false)",
+                        "type": "text/plain"
+                      },
+                      "key": "despill",
+                      "value": "false",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": \"Please provide an image.\",\n  \"status_code\": 400,\n  \"type\": \"missing_image\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "933f53e1-cc26-4dba-90e7-17eda57a0154",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "segment"
+                  ],
+                  "host": [
+                    "sdk",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) The image file to render",
+                        "type": "text/plain"
+                      },
+                      "key": "image_file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The format of the resulting image (This can only be one of png,jpg,webp)",
+                        "type": "text/plain"
+                      },
+                      "key": "format",
+                      "value": "png",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The channels of the resulting image (This can only be one of rgba,alpha)",
+                        "type": "text/plain"
+                      },
+                      "key": "channels",
+                      "value": "rgba",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The background color of the resulting image. Can be a hex code (`#FF00FF`) or a HTML color (`red`, `green`, etc.)",
+                        "type": "text/plain"
+                      },
+                      "key": "bg_color",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Will resize the output to the specified size. Can be `preview` (0.25 Megapixels), `medium` (1.5 MP), `hd` (4 MP) or `full` (36 MP, can be slower for large images). Useful for mobile apps that need smaller images. (This can only be one of preview,medium,hd,full)",
+                        "type": "text/plain"
+                      },
+                      "key": "size",
+                      "value": "full",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "If `true`, the image returned is cropped to the cutout border. Transparent pixels are removed from the border (This can only be one of true,false)",
+                        "type": "text/plain"
+                      },
+                      "key": "crop",
+                      "value": "false",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "If `true`, automatically removes colored reflections that have been left on the main subject by a green background. (This can only be one of true,false)",
+                        "type": "text/plain"
+                      },
+                      "key": "despill",
+                      "value": "false",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ec1917ea-5b8f-446e-89fa-77800d68bb0d",
+    "name": "Photoroom Account Segment API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Photoroom API takes an image as input, applies edits (background removal, AI backgrounds, shadows, relighting, text removal, flat lay, ghost mannequin, virtual model, and more), and returns the edited image.\n\nFor tested parameter combinations for common use cases, see our tutorials before building your integration:\n- Second-hand marketplace listings: https://docs.photoroom.com/tutorials/how-to-improve-images-for-second-hand-item-marketplaces\n- E-commerce with brand consistency: https://docs.photoroom.com/tutorials/how-to-create-e-commerce-images-with-consistent-brand-guidelines\n- Food delivery apps: https://docs.photoroom.com/tutorials/how-to-create-food-delivery-images-with-consistent-brand-guidelines\n- Google Shopping compliance: https://docs.photoroom.com/tutorials/how-to-create-compliant-product-images-for-google-shopping\n- Sticker images: https://docs.photoroom.com/tutorials/how-to-create-sticker-images\n\nTo use the API, you need an API key. Create one at https://app.photoroom.com/api-dashboard. The key must be passed in the x-api-key header on every request.\n\nFull documentation: https://docs.photoroom.com\n\nContact Support:\n Name: Photoroom API Team\n Email: api-help@photorom.com",
+      "type": "text/plain"
+    }
+  }
+}

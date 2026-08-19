@@ -1,0 +1,880 @@
+{
+  "item": [
+    {
+      "id": "8252ecea-1dc3-4cc7-97e4-583d638cade7",
+      "name": "Render",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dd4d8ca7-7ae1-493b-a8d0-8f3272890eee",
+          "name": "[LEGACY] Image Editing v1 (Plus plan)",
+          "request": {
+            "name": "[LEGACY] Image Editing v1 (Plus plan)",
+            "description": {
+              "content": "Deprecated: use /v2/edit instead.\n\nThis is a legacy endpoint, it is not recommended for new integrations.\n\nFor new integrations, please use /v2/edit which offers all the same functionalities, plus additional AI features.",
+              "type": "text/plain"
+            },
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v1",
+                "render"
+              ],
+              "host": [
+                "image-api",
+                "photoroom",
+                "com"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "apiKey",
+                  "value": "<string>",
+                  "description": "The API key to authenticate the request"
+                },
+                {
+                  "disabled": false,
+                  "key": "templateId",
+                  "value": "<string>",
+                  "description": "(Required) The ID of the template to render"
+                },
+                {
+                  "disabled": false,
+                  "key": "imageUrl",
+                  "value": "<uri>",
+                  "description": "The image URL to render"
+                },
+                {
+                  "disabled": false,
+                  "key": "conceptUrl",
+                  "value": "<uri>",
+                  "description": "Deprecated, use `imageUrl` instead."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "image/png"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aaea9997-373c-45f4-92fd-596e7b762484",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "render"
+                  ],
+                  "host": [
+                    "image-api",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "4a5b60936c3a934hqb3cf5838b390dc3d4dfc9da"
+                    },
+                    {
+                      "key": "templateId",
+                      "value": "592dd982-4a1b-4cd9-ab11-21481d5a0064"
+                    },
+                    {
+                      "key": "imageUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png"
+                    },
+                    {
+                      "key": "conceptUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "image/png"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "image/png"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "25819c48-e2ee-47d9-9921-e49c5bafd27d",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "render"
+                  ],
+                  "host": [
+                    "image-api",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "4a5b60936c3a934hqb3cf5838b390dc3d4dfc9da"
+                    },
+                    {
+                      "key": "templateId",
+                      "value": "592dd982-4a1b-4cd9-ab11-21481d5a0064"
+                    },
+                    {
+                      "key": "imageUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png"
+                    },
+                    {
+                      "key": "conceptUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"message\": \"imageUrl: must be provided\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4a3bcbed-4b36-4f18-bff5-39f3fdc4e4b5",
+              "name": "Payment Required",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "render"
+                  ],
+                  "host": [
+                    "image-api",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "4a5b60936c3a934hqb3cf5838b390dc3d4dfc9da"
+                    },
+                    {
+                      "key": "templateId",
+                      "value": "592dd982-4a1b-4cd9-ab11-21481d5a0064"
+                    },
+                    {
+                      "key": "imageUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png"
+                    },
+                    {
+                      "key": "conceptUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"detail\": \"API credits exhausted. Visit https://app.photoroom.com/api-dashboard to purchase more API credits\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1b271e2d-6b94-46c2-9b3f-aa1daa692ea6",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "render"
+                  ],
+                  "host": [
+                    "image-api",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "4a5b60936c3a934hqb3cf5838b390dc3d4dfc9da"
+                    },
+                    {
+                      "key": "templateId",
+                      "value": "592dd982-4a1b-4cd9-ab11-21481d5a0064"
+                    },
+                    {
+                      "key": "imageUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png"
+                    },
+                    {
+                      "key": "conceptUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c42db562-a425-4dba-a2f3-cce0d34e8875",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "render"
+                  ],
+                  "host": [
+                    "image-api",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "4a5b60936c3a934hqb3cf5838b390dc3d4dfc9da"
+                    },
+                    {
+                      "key": "templateId",
+                      "value": "592dd982-4a1b-4cd9-ab11-21481d5a0064"
+                    },
+                    {
+                      "key": "imageUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png"
+                    },
+                    {
+                      "key": "conceptUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"message\": \"An unexpected error occurred. Please try again later or contact support.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "646f221e-0e65-400b-b9de-77b627d596cb",
+          "name": "[LEGACY] Image Editing v1 (Plus plan)",
+          "request": {
+            "name": "[LEGACY] Image Editing v1 (Plus plan)",
+            "description": {
+              "content": "Deprecated: use /v2/edit instead.\n\nThis is a legacy endpoint, it is not recommended for new integrations.\n\nFor new integrations, please use /v2/edit which offers all the same functionalities, plus additional AI features.",
+              "type": "text/plain"
+            },
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v1",
+                "render"
+              ],
+              "host": [
+                "image-api",
+                "photoroom",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "image/png"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "templateId",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "(Required) The ID of the template to render"
+                },
+                {
+                  "key": "imageFile",
+                  "type": "file",
+                  "description": "The image file to render"
+                },
+                {
+                  "key": "imageUrl",
+                  "value": "<uri>",
+                  "type": "text",
+                  "description": "Deprecated, use `imageFile` instead."
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "57aa87f5-57ba-43ae-bf7a-41d0665fd26b",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "render"
+                  ],
+                  "host": [
+                    "image-api",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "image/png"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) The ID of the template to render",
+                        "type": "text/plain"
+                      },
+                      "key": "templateId",
+                      "value": "592dd982-4a1b-4cd9-ab11-21481d5a0064",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The image file to render",
+                        "type": "text/plain"
+                      },
+                      "key": "imageFile",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Deprecated, use `imageFile` instead.",
+                        "type": "text/plain"
+                      },
+                      "key": "imageUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "image/png"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5744802b-0877-40eb-8997-da9d8cdeb278",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "render"
+                  ],
+                  "host": [
+                    "image-api",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) The ID of the template to render",
+                        "type": "text/plain"
+                      },
+                      "key": "templateId",
+                      "value": "592dd982-4a1b-4cd9-ab11-21481d5a0064",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The image file to render",
+                        "type": "text/plain"
+                      },
+                      "key": "imageFile",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Deprecated, use `imageFile` instead.",
+                        "type": "text/plain"
+                      },
+                      "key": "imageUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"message\": \"imageFile: must be provided\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e6ce3828-71cc-4d6e-a43e-c12b7c3235e2",
+              "name": "Payment Required",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "render"
+                  ],
+                  "host": [
+                    "image-api",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) The ID of the template to render",
+                        "type": "text/plain"
+                      },
+                      "key": "templateId",
+                      "value": "592dd982-4a1b-4cd9-ab11-21481d5a0064",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The image file to render",
+                        "type": "text/plain"
+                      },
+                      "key": "imageFile",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Deprecated, use `imageFile` instead.",
+                        "type": "text/plain"
+                      },
+                      "key": "imageUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Payment Required",
+              "code": 402,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"detail\": \"API credits exhausted. Visit https://app.photoroom.com/api-dashboard to purchase more API credits\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c7ec10cd-29e7-4032-9527-018325540074",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "render"
+                  ],
+                  "host": [
+                    "image-api",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) The ID of the template to render",
+                        "type": "text/plain"
+                      },
+                      "key": "templateId",
+                      "value": "592dd982-4a1b-4cd9-ab11-21481d5a0064",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The image file to render",
+                        "type": "text/plain"
+                      },
+                      "key": "imageFile",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Deprecated, use `imageFile` instead.",
+                        "type": "text/plain"
+                      },
+                      "key": "imageUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a7b05593-2f89-4505-82df-bfc6805b6556",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v1",
+                    "render"
+                  ],
+                  "host": [
+                    "image-api",
+                    "photoroom",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) The ID of the template to render",
+                        "type": "text/plain"
+                      },
+                      "key": "templateId",
+                      "value": "592dd982-4a1b-4cd9-ab11-21481d5a0064",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The image file to render",
+                        "type": "text/plain"
+                      },
+                      "key": "imageFile",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Deprecated, use `imageFile` instead.",
+                        "type": "text/plain"
+                      },
+                      "key": "imageUrl",
+                      "value": "https://s3.amazonaws.com/a.storyblok.com/f/191576/1024x1024/d25e1a99d7/sample-05.png",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"message\": \"An unexpected error occurred. Please try again later or contact support.\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3c3c9e33-745f-4bbd-825d-92229a87e8a0",
+    "name": "Photoroom Account Render API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Photoroom API takes an image as input, applies edits (background removal, AI backgrounds, shadows, relighting, text removal, flat lay, ghost mannequin, virtual model, and more), and returns the edited image.\n\nFor tested parameter combinations for common use cases, see our tutorials before building your integration:\n- Second-hand marketplace listings: https://docs.photoroom.com/tutorials/how-to-improve-images-for-second-hand-item-marketplaces\n- E-commerce with brand consistency: https://docs.photoroom.com/tutorials/how-to-create-e-commerce-images-with-consistent-brand-guidelines\n- Food delivery apps: https://docs.photoroom.com/tutorials/how-to-create-food-delivery-images-with-consistent-brand-guidelines\n- Google Shopping compliance: https://docs.photoroom.com/tutorials/how-to-create-compliant-product-images-for-google-shopping\n- Sticker images: https://docs.photoroom.com/tutorials/how-to-create-sticker-images\n\nTo use the API, you need an API key. Create one at https://app.photoroom.com/api-dashboard. The key must be passed in the x-api-key header on every request.\n\nFull documentation: https://docs.photoroom.com\n\nContact Support:\n Name: Photoroom API Team\n Email: api-help@photorom.com",
+      "type": "text/plain"
+    }
+  }
+}

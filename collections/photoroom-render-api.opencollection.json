@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Photoroom Account Render API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Render",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "[LEGACY] Image Editing v1 (Plus plan)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/v1/render",
+            "params": [
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "query",
+                "description": "The API key to authenticate the request"
+              },
+              {
+                "name": "templateId",
+                "value": "",
+                "type": "query",
+                "description": "The ID of the template to render"
+              },
+              {
+                "name": "imageUrl",
+                "value": "",
+                "type": "query",
+                "description": "The image URL to render"
+              },
+              {
+                "name": "conceptUrl",
+                "value": "",
+                "type": "query",
+                "description": "Deprecated, use `imageUrl` instead."
+              }
+            ]
+          },
+          "docs": "Deprecated: use /v2/edit instead.\n\nThis is a legacy endpoint, it is not recommended for new integrations.\n\nFor new integrations, please use /v2/edit which offers all the same functionalities, plus additional AI features."
+        },
+        {
+          "info": {
+            "name": "[LEGACY] Image Editing v1 (Plus plan)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/v1/render",
+            "body": {
+              "type": "multipart-form",
+              "data": []
+            }
+          },
+          "docs": "Deprecated: use /v2/edit instead.\n\nThis is a legacy endpoint, it is not recommended for new integrations.\n\nFor new integrations, please use /v2/edit which offers all the same functionalities, plus additional AI features."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

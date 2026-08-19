@@ -1,0 +1,94 @@
+# Photoroom API Documentation
+
+## Photoroom API Documentation
+
+- [Introduction](https://docs.photoroom.com/getting-started/introduction.md)
+- [Pricing](https://docs.photoroom.com/getting-started/pricing.md)
+- [Support](https://docs.photoroom.com/getting-started/support.md)
+- [Frequently Asked Questions](https://docs.photoroom.com/getting-started/frequently-asked-questions.md)
+- [Troubleshooting](https://docs.photoroom.com/getting-started/troubleshooting.md): On this page, you will find some common questions or issues you might encounter when integrating the Photoroom API, along with their answer.
+- [Changelog](https://docs.photoroom.com/getting-started/changelog.md): History of the changes made to the Photoroom API
+- [What we're working on](https://docs.photoroom.com/getting-started/what-were-working-on.md)
+- [API Reference (OpenAPI)](https://docs.photoroom.com/getting-started/api-reference-openapi.md)
+- [How to improve images for second-hand item marketplaces](https://docs.photoroom.com/tutorials/how-to-improve-images-for-second-hand-item-marketplaces.md)
+- [How to create e-commerce images with consistent brand guidelines](https://docs.photoroom.com/tutorials/how-to-create-e-commerce-images-with-consistent-brand-guidelines.md)
+- [How to create food delivery images with consistent brand guidelines](https://docs.photoroom.com/tutorials/how-to-create-food-delivery-images-with-consistent-brand-guidelines.md)
+- [How to create listing images for clothing and apparel](https://docs.photoroom.com/tutorials/how-to-create-listing-images-for-clothing-and-apparel.md)
+- [How to create compliant product images for Google Shopping](https://docs.photoroom.com/tutorials/how-to-create-compliant-product-images-for-google-shopping.md)
+- [How to create sticker images](https://docs.photoroom.com/tutorials/how-to-create-sticker-images.md)
+- [How to create a selfie generator](https://docs.photoroom.com/tutorials/how-to-create-a-selfie-generator.md)
+- [Overview](https://docs.photoroom.com/visual-agent-api-enterprise-plan/overview.md)
+- [Overview](https://docs.photoroom.com/visual-qa-api-enterprise-plan/overview.md)
+- [Overview](https://docs.photoroom.com/video-api-enterprise-plan/overview.md)
+- [Quickstart Guide](https://docs.photoroom.com/image-editing-api-plus-plan/quickstart-guide.md)
+- [Pricing](https://docs.photoroom.com/image-editing-api-plus-plan/pricing.md)
+- [File size, resolution and format](https://docs.photoroom.com/image-editing-api-plus-plan/file-size-resolution-and-format.md)
+- [Preserve metadata](https://docs.photoroom.com/image-editing-api-plus-plan/preserve-metadata.md)
+- [Output Size](https://docs.photoroom.com/image-editing-api-plus-plan/output-size.md)
+- [Keep existing transparency](https://docs.photoroom.com/image-editing-api-plus-plan/keep-existing-transparency.md)
+- [HD Background Removal](https://docs.photoroom.com/image-editing-api-plus-plan/hd-background-removal.md)
+- [Pixel Density (DPI)](https://docs.photoroom.com/image-editing-api-plus-plan/pixel-density-dpi.md)
+- [Sandbox Mode](https://docs.photoroom.com/image-editing-api-plus-plan/sandbox-mode.md)
+- [Uncertainty score](https://docs.photoroom.com/image-editing-api-plus-plan/uncertainty-score.md)
+- [Positioning](https://docs.photoroom.com/image-editing-api-plus-plan/positioning.md)
+- [Smart Cropping](https://docs.photoroom.com/image-editing-api-plus-plan/smart-cropping.md)
+- [Static Background](https://docs.photoroom.com/image-editing-api-plus-plan/static-background.md)
+- [Background Blur](https://docs.photoroom.com/image-editing-api-plus-plan/background-blur.md)
+- [Subject Outline](https://docs.photoroom.com/image-editing-api-plus-plan/subject-outline.md)
+- [Create Any Image](https://docs.photoroom.com/image-editing-api-plus-plan/create-any-image.md)
+- [Edit With AI](https://docs.photoroom.com/image-editing-api-plus-plan/edit-with-ai.md)
+- [Flat Lay](https://docs.photoroom.com/image-editing-api-plus-plan/flat-lay.md)
+- [Ghost Mannequin](https://docs.photoroom.com/image-editing-api-plus-plan/ghost-mannequin.md)
+- [Virtual Model](https://docs.photoroom.com/image-editing-api-plus-plan/virtual-model.md)
+- [Virtual Try-On](https://docs.photoroom.com/image-editing-api-plus-plan/virtual-try-on.md)
+- [AI Beautifier](https://docs.photoroom.com/image-editing-api-plus-plan/ai-beautifier.md)
+- [AI Backgrounds](https://docs.photoroom.com/image-editing-api-plus-plan/ai-backgrounds.md)
+- [AI Expand](https://docs.photoroom.com/image-editing-api-plus-plan/ai-expand.md)
+- [AI Ironing](https://docs.photoroom.com/image-editing-api-plus-plan/ai-ironing.md)
+- [AI Relight](https://docs.photoroom.com/image-editing-api-plus-plan/ai-relight.md)
+- [AI Shadows](https://docs.photoroom.com/image-editing-api-plus-plan/ai-shadows.md)
+- [AI Text Removal](https://docs.photoroom.com/image-editing-api-plus-plan/ai-text-removal.md)
+- [AI Uncrop](https://docs.photoroom.com/image-editing-api-plus-plan/ai-uncrop.md)
+- [\[Preview\] AI Upscale](https://docs.photoroom.com/image-editing-api-plus-plan/preview-ai-upscale.md)
+- [\[Preview\] Text-Guided Segmentation](https://docs.photoroom.com/image-editing-api-plus-plan/preview-text-guided-segmentation.md)
+- [\[Preview\] Templating mode](https://docs.photoroom.com/image-editing-api-plus-plan/preview-templating-mode.md)
+- [Quickstart Guide](https://docs.photoroom.com/remove-background-api-basic-plan/quickstart-guide.md)
+- [Pricing](https://docs.photoroom.com/remove-background-api-basic-plan/pricing.md)
+- [File size, resolution and format](https://docs.photoroom.com/remove-background-api-basic-plan/file-size-resolution-and-format.md)
+- [Download the segmentation mask](https://docs.photoroom.com/remove-background-api-basic-plan/download-the-segmentation-mask.md)
+- [Sandbox Mode](https://docs.photoroom.com/remove-background-api-basic-plan/sandbox-mode.md)
+- [Uncertainty score](https://docs.photoroom.com/remove-background-api-basic-plan/uncertainty-score.md)
+- [Green screen despill](https://docs.photoroom.com/remove-background-api-basic-plan/green-screen-despill.md)
+- [Background Color, Size and Crop](https://docs.photoroom.com/remove-background-api-basic-plan/background-color-size-and-crop.md)
+- [Remove.bg compatibility](https://docs.photoroom.com/remove-background-api-basic-plan/remove.bg-compatibility.md)
+- [Code Samples](https://docs.photoroom.com/remove-background-api-basic-plan/code-samples.md)
+- [Web Integration](https://docs.photoroom.com/remove-background-api-basic-plan/code-samples/web-integration.md)
+- [Node.js Integration](https://docs.photoroom.com/remove-background-api-basic-plan/code-samples/node.js-integration.md)
+- [Python Integration](https://docs.photoroom.com/remove-background-api-basic-plan/code-samples/python-integration.md)
+- [iOS / Swift Integration](https://docs.photoroom.com/remove-background-api-basic-plan/code-samples/ios-swift-integration.md)
+- [How to process images from a local directory](https://docs.photoroom.com/integrations/how-to-process-images-from-a-local-directory.md)
+- [How to process images from Google Drive](https://docs.photoroom.com/integrations/how-to-process-images-from-google-drive.md)
+- [How to process images from Google Sheets](https://docs.photoroom.com/integrations/how-to-process-images-from-google-sheets.md)
+- [How to process images from an Excel spreadsheet](https://docs.photoroom.com/integrations/how-to-process-images-from-an-excel-spreadsheet.md)
+- [How to process images from Google Drive using Zapier](https://docs.photoroom.com/integrations/how-to-process-images-from-google-drive-using-zapier.md)
+- [How to process images from Google Drive using Make.com](https://docs.photoroom.com/integrations/how-to-process-images-from-google-drive-using-make.com.md)
+- [How to process images using an iOS or macOS Shortcut](https://docs.photoroom.com/integrations/how-to-process-images-using-an-ios-or-macos-shortcut.md)
+- [AI Backgrounds Competitors Benchmark (Claid.ai, Phot.ai, Bria.ai)](https://docs.photoroom.com/resources/ai-backgrounds-competitors-benchmark-claid.ai-phot.ai-bria.ai.md)
+- [Remove Background Competitors Benchmark (Remove.bg, Clipdrop, SAM, Azure)](https://docs.photoroom.com/resources/remove-background-competitors-benchmark-remove.bg-clipdrop-sam-azure.md)
+- [Grocery Delivery Image API Benchmark (Claid.ai, Picsart)](https://docs.photoroom.com/resources/grocery-delivery-image-api-benchmark-claid.ai-picsart.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.photoroom.com/getting-started/introduction.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
