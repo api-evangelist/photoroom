@@ -22,6 +22,12 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/photoroom.png
 tags:
+  - Artificial Intelligence
+  - Image Editing
+  - Background Removal
+  - E-Commerce
+  - Visual
+tags_raw:
   - AI
   - Image Editing
   - Background Removal
