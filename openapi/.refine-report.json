@@ -1,10 +1,7 @@
 {
   "provider": "photoroom",
   "sources": [
-    "photoroom-account-api-openapi.yml",
-    "photoroom-edit-api-openapi.yml",
-    "photoroom-render-api-openapi.yml",
-    "photoroom-segment-api-openapi.yml"
+    "_original/photoroom-openapi.yml"
   ],
   "outputs": [
     "photoroom-account-api-openapi.yml",
@@ -15,6 +12,26 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "photoroom-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "photoroom-openapi.yml: tagged paths POST /v1/segment -> Segment",
+    "photoroom-openapi.yml: tagged paths GET /v1/account -> Account",
+    "photoroom-openapi.yml: tagged paths GET /v2/account -> Account",
+    "photoroom-openapi.yml: tagged paths GET /v2/edit -> Edit",
+    "photoroom-openapi.yml: tagged paths POST /v2/edit -> Edit",
+    "photoroom-openapi.yml: tagged paths GET /v1/render -> Render",
+    "photoroom-openapi.yml: tagged paths POST /v1/render -> Render",
+    "photoroom-openapi.yml: declared missing tag: Account",
+    "photoroom-openapi.yml: declared missing tag: Edit",
+    "photoroom-openapi.yml: declared missing tag: Render",
+    "photoroom-openapi.yml: declared missing tag: Segment",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "photoroom-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "photoroom-edit-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "photoroom-render-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "photoroom-segment-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

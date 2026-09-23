@@ -1,27 +1,8 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Photoroom Account Edit API
+  title: Photoroom Edit API
   version: 1.0.0
-  description: 'The Photoroom API takes an image as input, applies edits (background removal, AI backgrounds, shadows, relighting, text removal, flat lay, ghost mannequin, virtual model, and more), and returns the edited image.
-
-
-    For tested parameter combinations for common use cases, see our tutorials before building your integration:
-
-    - Second-hand marketplace listings: https://docs.photoroom.com/tutorials/how-to-improve-images-for-second-hand-item-marketplaces
-
-    - E-commerce with brand consistency: https://docs.photoroom.com/tutorials/how-to-create-e-commerce-images-with-consistent-brand-guidelines
-
-    - Food delivery apps: https://docs.photoroom.com/tutorials/how-to-create-food-delivery-images-with-consistent-brand-guidelines
-
-    - Google Shopping compliance: https://docs.photoroom.com/tutorials/how-to-create-compliant-product-images-for-google-shopping
-
-    - Sticker images: https://docs.photoroom.com/tutorials/how-to-create-sticker-images
-
-
-    To use the API, you need an API key. Create one at https://app.photoroom.com/api-dashboard. The key must be passed in the x-api-key header on every request.
-
-
-    Full documentation: https://docs.photoroom.com'
+  description: The Photoroom API takes an image as input, applies edits (background removal, AI backgrounds, shadows, relighting, text removal, flat lay, ghost mannequin, virtual model, and more), and returns the edited image.
   contact:
     name: Photoroom API Team
     email: api-help@photorom.com
@@ -36,7 +17,73 @@ paths:
     get:
       operationId: edit-image-get
       summary: Image Editing v2 (Plus plan)
-      description: "This endpoint processes an image and applies one or more edits: background removal, AI-generated backgrounds (background.prompt), realistic shadows (shadow.mode), relighting (lighting.mode), text removal (textRemoval.mode), background blur (background.blur.*), subject outline (outline.*), AI beautification (beautify.mode), Flat Lay (flatLay.*), Ghost Mannequin (ghostMannequin.*), Virtual Model (virtualModel.*), AI expand (expand.mode), AI uncrop (uncrop.mode), AI upscale (upscale.mode), and positioning/resizing (padding, margin, outputSize).\n\nParameters are grouped by feature using dot notation: background.* for backgrounds, shadow.* for shadows, lighting.* for relighting, outline.* for subject outlines, beautify.* for AI beautification, flatLay.* for flat lay generation, ghostMannequin.* for ghost mannequin generation, virtualModel.* for virtual model generation, expand.* for AI expand, uncrop.* for AI uncrop, upscale.* for AI upscale, export.* for output format, and segmentation.* for text-guided segmentation.\n\nEdits can be combined in a single call.\n\nIt accepts a URL input for the image. If you want to directly upload an image file, please use the POST endpoint. For more details on the difference between the GET and POST endpoints, please have a look at our documentation: https://docs.photoroom.com/image-editing-api/which-endpoints-are-available.\n\nFor the simplest integration (recommended for no-code tools like Lovable), use this GET endpoint with imageUrl — no file upload handling required. \n\nExample of a request: GET https://image-api.photoroom.com/v2/edit?imageUrl=https://example.com/photo.jpg&removeBackground=true&background.color=FFFFFF&outputSize=1000x1000&padding=0.1 with header x-api-key: YOUR_API_KEY\n\nThe response is the edited image as binary data (image/png by default). To change format, set export.format to jpeg or webp.\n\nFull documentation: https://docs.photoroom.com/image-editing-api-plus-plan/quickstart-guide\n\nFeature documentation:\n- [HD Background Removal](https://docs.photoroom.com/image-editing-api-plus-plan/hd-background-removal)\n- [Positioning (padding, margin, scaling)](https://docs.photoroom.com/image-editing-api-plus-plan/positioning)\n- [Output Size](https://docs.photoroom.com/image-editing-api-plus-plan/output-size)\n- [Static Background](https://docs.photoroom.com/image-editing-api-plus-plan/static-background)\n- [Background Blur](https://docs.photoroom.com/image-editing-api-plus-plan/background-blur)\n- [Subject Outline](https://docs.photoroom.com/image-editing-api-plus-plan/subject-outline)\n- [AI Shadows](https://docs.photoroom.com/image-editing-api-plus-plan/ai-shadows)\n- [AI Backgrounds](https://docs.photoroom.com/image-editing-api-plus-plan/ai-backgrounds)\n- [AI Relight](https://docs.photoroom.com/image-editing-api-plus-plan/ai-relight)\n- [AI Text Removal](https://docs.photoroom.com/image-editing-api-plus-plan/ai-text-removal)\n- [AI Expand](https://docs.photoroom.com/image-editing-api-plus-plan/ai-expand)\n- [AI Uncrop](https://docs.photoroom.com/image-editing-api-plus-plan/ai-uncrop)\n- [AI Beautifier](https://docs.photoroom.com/image-editing-api-plus-plan/ai-beautifier)\n- [Flat Lay](https://docs.photoroom.com/image-editing-api-plus-plan/flat-lay)\n- [Ghost Mannequin](https://docs.photoroom.com/image-editing-api-plus-plan/ghost-mannequin)\n- [Virtual Model](https://docs.photoroom.com/image-editing-api-plus-plan/virtual-model)\n- [AI Upscale](https://docs.photoroom.com/image-editing-api-plus-plan/alpha-ai-upscale)\n- [Describe Any Change](https://docs.photoroom.com/image-editing-api-plus-plan/edit-with-ai)\n- [Create Any Image](https://docs.photoroom.com/image-editing-api-plus-plan/alpha-create-any-image)\n- [Text-Guided Segmentation](https://docs.photoroom.com/image-editing-api-plus-plan/alpha-text-guided-segmentation)\n- [Sandbox Mode (free testing)](https://docs.photoroom.com/image-editing-api-plus-plan/sandbox-mode)"
+      description: 'This endpoint processes an image and applies one or more edits: background removal, AI-generated backgrounds (background.prompt), realistic shadows (shadow.mode), relighting (lighting.mode), text removal (textRemoval.mode), background blur (background.blur.*), subject outline (outline.*), AI beautification (beautify.mode), Flat Lay (flatLay.*), Ghost Mannequin (ghostMannequin.*), Virtual Model (virtualModel.*), AI expand (expand.mode), AI uncrop (uncrop.mode), AI upscale (upscale.mode), and positioning/resizing (padding, margin, outputSize).
+
+
+        Parameters are grouped by feature using dot notation: background.* for backgrounds, shadow.* for shadows, lighting.* for relighting, outline.* for subject outlines, beautify.* for AI beautification, flatLay.* for flat lay generation, ghostMannequin.* for ghost mannequin generation, virtualModel.* for virtual model generation, expand.* for AI expand, uncrop.* for AI uncrop, upscale.* for AI upscale, export.* for output format, and segmentation.* for text-guided segmentation.
+
+
+        Edits can be combined in a single call.
+
+
+        It accepts a URL input for the image. If you want to directly upload an image file, please use the POST endpoint. For more details on the difference between the GET and POST endpoints, please have a look at our documentation: https://docs.photoroom.com/image-editing-api/which-endpoints-are-available.
+
+
+        For the simplest integration (recommended for no-code tools like Lovable), use this GET endpoint with imageUrl — no file upload handling required.
+
+
+        Example of a request: GET https://image-api.photoroom.com/v2/edit?imageUrl=https://example.com/photo.jpg&removeBackground=true&background.color=FFFFFF&outputSize=1000x1000&padding=0.1 with header x-api-key: YOUR_API_KEY
+
+
+        The response is the edited image as binary data (image/png by default). To change format, set export.format to jpeg or webp.
+
+
+        Full documentation: https://docs.photoroom.com/image-editing-api-plus-plan/quickstart-guide
+
+
+        Feature documentation:
+
+        - HD Background Removal
+
+        - Positioning (padding, margin, scaling)
+
+        - Output Size
+
+        - Static Background
+
+        - Background Blur
+
+        - Subject Outline
+
+        - AI Shadows
+
+        - AI Backgrounds
+
+        - AI Relight
+
+        - AI Text Removal
+
+        - AI Expand
+
+        - AI Uncrop
+
+        - AI Beautifier
+
+        - Flat Lay
+
+        - Ghost Mannequin
+
+        - Virtual Model
+
+        - AI Upscale
+
+        - Describe Any Change
+
+        - Create Any Image
+
+        - Text-Guided Segmentation
+
+        - Sandbox Mode (free testing)'
       servers:
       - url: https://image-api.photoroom.com
         description: Production server (Plus plan)
@@ -1589,47 +1636,47 @@ paths:
 
         Feature documentation:
 
-        - [HD Background Removal](https://docs.photoroom.com/image-editing-api-plus-plan/hd-background-removal)
+        - HD Background Removal
 
-        - [Positioning (padding, margin, scaling)](https://docs.photoroom.com/image-editing-api-plus-plan/positioning)
+        - Positioning (padding, margin, scaling)
 
-        - [Output Size](https://docs.photoroom.com/image-editing-api-plus-plan/output-size)
+        - Output Size
 
-        - [Static Background](https://docs.photoroom.com/image-editing-api-plus-plan/static-background)
+        - Static Background
 
-        - [Background Blur](https://docs.photoroom.com/image-editing-api-plus-plan/background-blur)
+        - Background Blur
 
-        - [Subject Outline](https://docs.photoroom.com/image-editing-api-plus-plan/subject-outline)
+        - Subject Outline
 
-        - [AI Shadows](https://docs.photoroom.com/image-editing-api-plus-plan/ai-shadows)
+        - AI Shadows
 
-        - [AI Backgrounds](https://docs.photoroom.com/image-editing-api-plus-plan/ai-backgrounds)
+        - AI Backgrounds
 
-        - [AI Relight](https://docs.photoroom.com/image-editing-api-plus-plan/ai-relight)
+        - AI Relight
 
-        - [AI Text Removal](https://docs.photoroom.com/image-editing-api-plus-plan/ai-text-removal)
+        - AI Text Removal
 
-        - [AI Expand](https://docs.photoroom.com/image-editing-api-plus-plan/ai-expand)
+        - AI Expand
 
-        - [AI Uncrop](https://docs.photoroom.com/image-editing-api-plus-plan/ai-uncrop)
+        - AI Uncrop
 
-        - [AI Beautifier](https://docs.photoroom.com/image-editing-api-plus-plan/ai-beautifier)
+        - AI Beautifier
 
-        - [Flat Lay](https://docs.photoroom.com/image-editing-api-plus-plan/flat-lay)
+        - Flat Lay
 
-        - [Ghost Mannequin](https://docs.photoroom.com/image-editing-api-plus-plan/ghost-mannequin)
+        - Ghost Mannequin
 
-        - [Virtual Model](https://docs.photoroom.com/image-editing-api-plus-plan/virtual-model)
+        - Virtual Model
 
-        - [AI Upscale](https://docs.photoroom.com/image-editing-api-plus-plan/alpha-ai-upscale)
+        - AI Upscale
 
-        - [Describe Any Change](https://docs.photoroom.com/image-editing-api-plus-plan/edit-with-ai)
+        - Describe Any Change
 
-        - [Create Any Image](https://docs.photoroom.com/image-editing-api-plus-plan/alpha-create-any-image)
+        - Create Any Image
 
-        - [Text-Guided Segmentation](https://docs.photoroom.com/image-editing-api-plus-plan/alpha-text-guided-segmentation)
+        - Text-Guided Segmentation
 
-        - [Sandbox Mode (free testing)](https://docs.photoroom.com/image-editing-api-plus-plan/sandbox-mode)'
+        - Sandbox Mode (free testing)'
       servers:
       - url: https://image-api.photoroom.com
         description: Production server (Plus plan)
@@ -2217,43 +2264,6 @@ paths:
       - Edit
 components:
   schemas:
-    edit-image-bad-request:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            message:
-              type: string
-              description: The message describing the error
-              title: Message
-              example: removeBackground must be boolean
-          required:
-          - message
-      required:
-      - error
-      title: Invalid value
-    unknown-error:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            message:
-              type: string
-              description: The message describing the error
-              title: Message
-              example: An unexpected error occurred. Please try again later or contact support.
-          required:
-          - message
-      required:
-      - error
-      title: Unknown Error
-    image-response:
-      type: string
-      title: Resulting image
-      description: The resulting image after rendering
-      format: binary
     payment-error:
       type: object
       properties:
@@ -2270,6 +2280,43 @@ components:
       required:
       - error
       title: Payment Error
+    unknown-error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            message:
+              type: string
+              description: The message describing the error
+              title: Message
+              example: An unexpected error occurred. Please try again later or contact support.
+          required:
+          - message
+      required:
+      - error
+      title: Unknown Error
+    edit-image-bad-request:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            message:
+              type: string
+              description: The message describing the error
+              title: Message
+              example: removeBackground must be boolean
+          required:
+          - message
+      required:
+      - error
+      title: Invalid value
+    image-response:
+      type: string
+      title: Resulting image
+      description: The resulting image after rendering
+      format: binary
   securitySchemes:
     x-api-key:
       type: apiKey
