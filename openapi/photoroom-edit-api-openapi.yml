@@ -2296,6 +2296,11 @@ components:
       required:
       - error
       title: Unknown Error
+    image-response:
+      type: string
+      title: Resulting image
+      description: The resulting image after rendering
+      format: binary
     edit-image-bad-request:
       type: object
       properties:
@@ -2312,11 +2317,6 @@ components:
       required:
       - error
       title: Invalid value
-    image-response:
-      type: string
-      title: Resulting image
-      description: The resulting image after rendering
-      format: binary
   securitySchemes:
     x-api-key:
       type: apiKey
