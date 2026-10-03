@@ -2264,6 +2264,27 @@ paths:
       - Edit
 components:
   schemas:
+    image-response:
+      type: string
+      title: Resulting image
+      description: The resulting image after rendering
+      format: binary
+    edit-image-bad-request:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            message:
+              type: string
+              description: The message describing the error
+              title: Message
+              example: removeBackground must be boolean
+          required:
+          - message
+      required:
+      - error
+      title: Invalid value
     payment-error:
       type: object
       properties:
@@ -2296,27 +2317,6 @@ components:
       required:
       - error
       title: Unknown Error
-    image-response:
-      type: string
-      title: Resulting image
-      description: The resulting image after rendering
-      format: binary
-    edit-image-bad-request:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            message:
-              type: string
-              description: The message describing the error
-              title: Message
-              example: removeBackground must be boolean
-          required:
-          - message
-      required:
-      - error
-      title: Invalid value
   securitySchemes:
     x-api-key:
       type: apiKey
