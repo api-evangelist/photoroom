@@ -2264,11 +2264,22 @@ paths:
       - Edit
 components:
   schemas:
-    image-response:
-      type: string
-      title: Resulting image
-      description: The resulting image after rendering
-      format: binary
+    unknown-error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            message:
+              type: string
+              description: The message describing the error
+              title: Message
+              example: An unexpected error occurred. Please try again later or contact support.
+          required:
+          - message
+      required:
+      - error
+      title: Unknown Error
     edit-image-bad-request:
       type: object
       properties:
@@ -2301,22 +2312,11 @@ components:
       required:
       - error
       title: Payment Error
-    unknown-error:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            message:
-              type: string
-              description: The message describing the error
-              title: Message
-              example: An unexpected error occurred. Please try again later or contact support.
-          required:
-          - message
-      required:
-      - error
-      title: Unknown Error
+    image-response:
+      type: string
+      title: Resulting image
+      description: The resulting image after rendering
+      format: binary
   securitySchemes:
     x-api-key:
       type: apiKey
