@@ -1,0 +1,409 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/photoroom/integrations
+- https://composio.dev/toolkits/photoroom
+checked:
+- https://composio.dev/toolkits/photoroom
+- https://monid.ai/tools/photoroom
+- https://n8n.io/integrations/photoroom/
+- https://zapier.com/apps/photoroom/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: photoroom
+  url: https://zapier.com/apps/photoroom/integrations
+  external_url: https://www.photoroom.com/
+  partner_tier: BRONZE
+  triggers: []
+  actions:
+  - key: editv2
+    label: Image Editing V2
+  - key: removeBackground
+    label: Remove Image Background
+  searches: []
+- marketplace: composio
+  channel: agent-gateway
+  app: photoroom
+  url: https://composio.dev/toolkits/photoroom
+  identity: action-prefix
+  actions:
+  - key: PHOTOROOM_EDIT_IMAGE
+  - key: PHOTOROOM_GENERATE_IMAGE
+  - key: PHOTOROOM_GET_ACCOUNT_USAGE
+  - key: PHOTOROOM_REMOVE_BACKGROUND
+edges:
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: Google Drive
+  partner: google-drive
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/google-drive
+  direction: third-party
+  category: File Management & Storage
+  partner_url: https://www.google.com/drive/
+- partner_name: Shopify
+  partner: shopify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/shopify
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.shopify.com/
+- partner_name: Dropbox
+  partner: dropbox
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/dropbox
+  direction: third-party
+  category: File Management & Storage
+  partner_url: https://dropbox.com/
+- partner_name: Google Forms
+  partner: google-forms
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/google-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://google.com/
+- partner_name: Stripe
+  partner: stripe
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/stripe
+  direction: third-party
+  category: Payment Processing
+  partner_url: https://stripe.com/
+- partner_name: Google Sheets
+  partner: google-sheets
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/google-sheets
+  direction: third-party
+  category: Google
+  partner_url: http://sheets.google.com/
+- partner_name: WooCommerce
+  partner: woocommerce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/woocommerce
+  direction: third-party
+  category: eCommerce
+  partner_url: https://woocommerce.com/products/woocommerce-zapier/?utm_source=zapier&utm_medium=website&utm_campaign=integration
+- partner_name: Adalo
+  partner: adalo
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/adalo
+  direction: third-party
+  category: App Builder
+  partner_url: https://www.adalo.com/?utm_campaign=zapier_profile
+- partner_name: PhoneBurner
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/phoneburner
+  direction: third-party
+  category: Phone & SMS
+  partner_url: https://phoneburner.com/
+- partner_name: Google Docs
+  partner: google-docs
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/google-docs
+  direction: third-party
+  category: Documents
+  partner_url: http://google.com/
+- partner_name: Microsoft Excel
+  partner: null
+  partner_match: null
+  partner_candidate: zapier
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/excel
+  direction: third-party
+  category: Microsoft
+  partner_url: https://zapier.com/office.com
+- partner_name: Discord
+  partner: discord
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/discord
+  direction: third-party
+  category: Team Chat
+  partner_url: https://discordapp.com/
+- partner_name: Uniqode
+  partner: uniqode
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/uniqode
+  direction: third-party
+  category: Marketing
+  partner_url: https://www.uniqode.com/
+- partner_name: Gmail
+  partner: gmail
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/gmail
+  direction: third-party
+  category: Email
+  partner_url: https://mail.google.com/
+- partner_name: Notion
+  partner: notion
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/notion
+  direction: third-party
+  category: Task Management
+  partner_url: https://www.notion.so/
+- partner_name: Tally
+  partner: tally
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/tally
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://try.tally.so/zapier
+- partner_name: Unbounce
+  partner: unbounce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/unbounce
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://unbounce.com/
+- partner_name: Paperform
+  partner: paperform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/paperform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://paperform.co/?utm_medium=partners&utm_source=Zapier&utm_campaign=integration_partners&utm_content=integration_page
+- partner_name: Flickr
+  partner: flickr
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/flickr
+  direction: third-party
+  category: Images & Design
+  partner_url: https://www.flickr.com/
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: Google Calendar
+  partner: google-calendar
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/google-calendar
+  direction: third-party
+  category: Calendar
+  partner_url: https://calendar.google.com/
+- partner_name: Trello
+  partner: trello
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/trello
+  direction: third-party
+  category: Project Management
+  partner_url: https://trello.com/
+- partner_name: Jotform
+  partner: jotform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/jotform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://www.jotform.com/
+- partner_name: ChatGPT (OpenAI)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/chatgpt
+  direction: third-party
+  category: AI Assistants
+  partner_url: https://chat.openai.com/chat
+- partner_name: YouTube
+  partner: youtube
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/youtube
+  direction: third-party
+  category: Google
+  partner_url: https://www.youtube.com/
+- partner_name: Microsoft Teams
+  partner: microsoft-teams
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/microsoft-teams
+  direction: third-party
+  category: Microsoft
+  partner_url: https://products.office.com/en-us/microsoft-teams/group-chat-software
+- partner_name: OneDrive
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/onedrive
+  direction: third-party
+  category: File Management & Storage
+  partner_url: https://onedrive.live.com/
+- partner_name: LinkedIn
+  partner: linkedin
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/linkedin
+  direction: third-party
+  category: Microsoft
+  partner_url: http://www.linkedin.com/
+- partner_name: CompanyCam
+  partner: companycam
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/companycam
+  direction: third-party
+  category: Images & Design
+  partner_url: http://companycam.com/
+templates:
+- title: Remove backgrounds with PhotoRoom from new Airtable records and update them
+  url: https://zapier.com/apps/airtable/integrations/airtable/1163668/remove-backgrounds-with-photoroom-from-new-airtable-records-and-update-them
+  apps:
+  - airtable
+  - photoroom
+- title: Remove backgrounds from new images in Image Relay via PhotoRoom
+  url: https://zapier.com/apps/image-relay/integrations/image-relay/1161949/remove-backgrounds-from-new-images-in-image-relay-via-photoroom
+  apps:
+  - image-relay
+  - photoroom
+- title: Remove backgrounds with PhotoRoom and update new images file in WordPress
+  url: https://zapier.com/apps/wordpress/integrations/wordpress/1164759/remove-backgrounds-with-photoroom-and-update-new-images-file-in-wordpress
+  apps:
+  - wordpress
+  - filter
+  - photoroom
+- title: Edit images in PhotoRoom when new spaces are created in Bettermode
+  url: https://zapier.com/apps/bettermode/integrations/photoroom/1757391/edit-images-in-photoroom-when-new-spaces-are-created-in-bettermode
+  apps:
+  - bettermode
+  - photoroom
+- title: Remove background from images for new files in Google Drive with PhotoRoom
+  url: https://zapier.com/apps/google-drive/integrations/photoroom/255591021/remove-background-from-images-for-new-files-in-google-drive-with-photoroom
+  apps:
+  - google-drive
+  - photoroom
+- title: Edit new Dropbox files in PhotoRoom with image editing v2 action immediately after their creation
+  url: https://zapier.com/apps/dropbox/integrations/photoroom/255591123/edit-new-dropbox-files-in-photoroom-with-image-editing-v2-action-immediately-after-their-creation
+  apps:
+  - dropbox
+  - photoroom
+- title: Edit new Google Drive files with PhotoRoom's image editing v2 feature
+  url: https://zapier.com/apps/google-drive/integrations/photoroom/255593907/edit-new-google-drive-files-with-photorooms-image-editing-v2-feature
+  apps:
+  - google-drive
+  - photoroom
+- title: Edit images in PhotoRoom from new or updated rows in Google Sheets
+  url: https://zapier.com/apps/google-sheets/integrations/photoroom/255604979/edit-images-in-photoroom-from-new-or-updated-rows-in-google-sheets
+  apps:
+  - google-sheets
+  - photoroom
+template_total: 8
