@@ -158,7 +158,6 @@
   arazzo: null
 - slug: photoroom-microsoft-excel
   label: Microsoft Excel
-  partner: microsoft-excel
   partner_name: Microsoft Excel
   category: Microsoft
   type: marketplace
@@ -166,7 +165,7 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/photoroom/integrations/excel
   source: edge
-  status: pending-generation
+  status: pending-partner-spec
   arazzo: null
 - slug: photoroom-discord
   label: Discord
@@ -381,4 +380,16 @@
   evidence: https://zapier.com/apps/photoroom/integrations/companycam
   source: edge
   status: pending-generation
+  arazzo: null
+- slug: photoroom-shopify-own
+  label: Shopify (own)
+  partner: shopify
+  partner_name: Shopify (own)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://apps.shopify.com/photoroom-production
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
   arazzo: null
