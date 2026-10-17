@@ -2264,6 +2264,22 @@ paths:
       - Edit
 components:
   schemas:
+    payment-error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            detail:
+              type: string
+              description: The details of the error
+              title: Details
+              example: API credits exhausted. Visit https://app.photoroom.com/api-dashboard to purchase more API credits
+          required:
+          - detail
+      required:
+      - error
+      title: Payment Error
     unknown-error:
       type: object
       properties:
@@ -2296,22 +2312,6 @@ components:
       required:
       - error
       title: Invalid value
-    payment-error:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            detail:
-              type: string
-              description: The details of the error
-              title: Details
-              example: API credits exhausted. Visit https://app.photoroom.com/api-dashboard to purchase more API credits
-          required:
-          - detail
-      required:
-      - error
-      title: Payment Error
     image-response:
       type: string
       title: Resulting image
