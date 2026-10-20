@@ -15,6 +15,7 @@
   evidence: https://zapier.com/apps/airtable/integrations/airtable/1163668/remove-backgrounds-with-photoroom-from-new-airtable-records-and-update-them
   template: https://zapier.com/apps/airtable/integrations/airtable/1163668/remove-backgrounds-with-photoroom-from-new-airtable-records-and-update-them
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: photoroom-remove-background-from-images-for-new-files-in-google-drive-with-photoroom
@@ -29,6 +30,7 @@
   evidence: https://zapier.com/apps/google-drive/integrations/photoroom/255591021/remove-background-from-images-for-new-files-in-google-drive-with-photoroom
   template: https://zapier.com/apps/google-drive/integrations/photoroom/255591021/remove-background-from-images-for-new-files-in-google-drive-with-photoroom
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: photoroom-edit-new-dropbox-files-in-photoroom-with-image-editing-v2-action-immediately-aft
@@ -43,6 +45,7 @@
   evidence: https://zapier.com/apps/dropbox/integrations/photoroom/255591123/edit-new-dropbox-files-in-photoroom-with-image-editing-v2-action-immediately-after-their-creation
   template: https://zapier.com/apps/dropbox/integrations/photoroom/255591123/edit-new-dropbox-files-in-photoroom-with-image-editing-v2-action-immediately-after-their-creation
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: photoroom-edit-new-google-drive-files-with-photoroom-s-image-editing-v2-feature
@@ -57,6 +60,7 @@
   evidence: https://zapier.com/apps/google-drive/integrations/photoroom/255593907/edit-new-google-drive-files-with-photorooms-image-editing-v2-feature
   template: https://zapier.com/apps/google-drive/integrations/photoroom/255593907/edit-new-google-drive-files-with-photorooms-image-editing-v2-feature
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: photoroom-edit-images-in-photoroom-from-new-or-updated-rows-in-google-sheets
@@ -71,314 +75,7 @@
   evidence: https://zapier.com/apps/google-sheets/integrations/photoroom/255604979/edit-images-in-photoroom-from-new-or-updated-rows-in-google-sheets
   template: https://zapier.com/apps/google-sheets/integrations/photoroom/255604979/edit-images-in-photoroom-from-new-or-updated-rows-in-google-sheets
   source: template
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-shopify
-  label: Shopify
-  partner: shopify
-  partner_name: Shopify
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/shopify
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-google-forms
-  label: Google Forms
-  partner: google-forms
-  partner_name: Google Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/google-forms
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-stripe
-  label: Stripe
-  partner: stripe
-  partner_name: Stripe
-  category: Payment Processing
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/stripe
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-woocommerce
-  label: WooCommerce
-  partner: woocommerce
-  partner_name: WooCommerce
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/woocommerce
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-adalo
-  label: Adalo
-  partner: adalo
-  partner_name: Adalo
-  category: App Builder
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/adalo
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: photoroom-phoneburner
-  label: PhoneBurner
-  partner_name: PhoneBurner
-  category: Phone & SMS
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/phoneburner
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: photoroom-google-docs
-  label: Google Docs
-  partner: google-docs
-  partner_name: Google Docs
-  category: Documents
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/google-docs
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-microsoft-excel
-  label: Microsoft Excel
-  partner_name: Microsoft Excel
-  category: Microsoft
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/excel
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: photoroom-discord
-  label: Discord
-  partner: discord
-  partner_name: Discord
-  category: Team Chat
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/discord
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-uniqode
-  label: Uniqode
-  partner: uniqode
-  partner_name: Uniqode
-  category: Marketing
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/uniqode
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: photoroom-gmail
-  label: Gmail
-  partner: gmail
-  partner_name: Gmail
-  category: Email
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/gmail
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: photoroom-notion
-  label: Notion
-  partner: notion
-  partner_name: Notion
-  category: Task Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/notion
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-tally
-  label: Tally
-  partner: tally
-  partner_name: Tally
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/tally
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-unbounce
-  label: Unbounce
-  partner: unbounce
-  partner_name: Unbounce
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/unbounce
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-paperform
-  label: Paperform
-  partner: paperform
-  partner_name: Paperform
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/paperform
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-flickr
-  label: Flickr
-  partner: flickr
-  partner_name: Flickr
-  category: Images & Design
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/flickr
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-slack
-  label: Slack
-  partner: slack
-  partner_name: Slack
-  category: Team Chat
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/slack
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-google-calendar
-  label: Google Calendar
-  partner: google-calendar
-  partner_name: Google Calendar
-  category: Calendar
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/google-calendar
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-trello
-  label: Trello
-  partner: trello
-  partner_name: Trello
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/trello
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-jotform
-  label: Jotform
-  partner: jotform
-  partner_name: Jotform
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/jotform
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-chatgpt-openai
-  label: ChatGPT (OpenAI)
-  partner_name: ChatGPT (OpenAI)
-  category: AI Assistants
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/chatgpt
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: photoroom-youtube
-  label: YouTube
-  partner: youtube
-  partner_name: YouTube
-  category: Google
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/youtube
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-microsoft-teams
-  label: Microsoft Teams
-  partner: microsoft-teams
-  partner_name: Microsoft Teams
-  category: Microsoft
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/microsoft-teams
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-onedrive
-  label: OneDrive
-  partner_name: OneDrive
-  category: File Management & Storage
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/onedrive
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: photoroom-linkedin
-  label: LinkedIn
-  partner: linkedin
-  partner_name: LinkedIn
-  category: Microsoft
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/linkedin
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: photoroom-companycam
-  label: CompanyCam
-  partner: companycam
-  partner_name: CompanyCam
-  category: Images & Design
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/photoroom/integrations/companycam
-  source: edge
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: photoroom-shopify-own
@@ -417,4 +114,339 @@
     beta: false
     builder: unknown (not in the directory record)
   status: not-a-workflow
+  arazzo: null
+- slug: photoroom-shopify
+  label: Shopify
+  partner: shopify
+  partner_name: Shopify
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/shopify
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-google-forms
+  label: Google Forms
+  partner: google-forms
+  partner_name: Google Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/google-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-stripe
+  label: Stripe
+  partner: stripe
+  partner_name: Stripe
+  category: Payment Processing
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/stripe
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-tally
+  label: Tally
+  partner: tally
+  partner_name: Tally
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/tally
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-woocommerce
+  label: WooCommerce
+  partner: woocommerce
+  partner_name: WooCommerce
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/woocommerce
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-adalo
+  label: Adalo
+  partner: adalo
+  partner_name: Adalo
+  category: App Builder
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/adalo
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: photoroom-phoneburner
+  label: PhoneBurner
+  partner_name: PhoneBurner
+  category: Phone & SMS
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/phoneburner
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: photoroom-google-docs
+  label: Google Docs
+  partner: google-docs
+  partner_name: Google Docs
+  category: Documents
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/google-docs
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-microsoft-excel
+  label: Microsoft Excel
+  partner_name: Microsoft Excel
+  category: Microsoft
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/excel
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: photoroom-discord
+  label: Discord
+  partner: discord
+  partner_name: Discord
+  category: Team Chat
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/discord
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-uniqode
+  label: Uniqode
+  partner: uniqode
+  partner_name: Uniqode
+  category: Marketing
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/uniqode
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: photoroom-gmail
+  label: Gmail
+  partner: gmail
+  partner_name: Gmail
+  category: Email
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/gmail
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: photoroom-notion
+  label: Notion
+  partner: notion
+  partner_name: Notion
+  category: Task Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/notion
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-unbounce
+  label: Unbounce
+  partner: unbounce
+  partner_name: Unbounce
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/unbounce
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-paperform
+  label: Paperform
+  partner: paperform
+  partner_name: Paperform
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/paperform
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-flickr
+  label: Flickr
+  partner: flickr
+  partner_name: Flickr
+  category: Images & Design
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/flickr
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-slack
+  label: Slack
+  partner: slack
+  partner_name: Slack
+  category: Team Chat
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/slack
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-google-calendar
+  label: Google Calendar
+  partner: google-calendar
+  partner_name: Google Calendar
+  category: Calendar
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/google-calendar
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-trello
+  label: Trello
+  partner: trello
+  partner_name: Trello
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/trello
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-jotform
+  label: Jotform
+  partner: jotform
+  partner_name: Jotform
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/jotform
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-chatgpt-openai
+  label: ChatGPT (OpenAI)
+  partner: openai
+  partner_name: ChatGPT (OpenAI)
+  category: AI Assistants
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/chatgpt
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-youtube
+  label: YouTube
+  partner: youtube
+  partner_name: YouTube
+  category: Google
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/youtube
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-microsoft-teams
+  label: Microsoft Teams
+  partner: microsoft-teams
+  partner_name: Microsoft Teams
+  category: Microsoft
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/microsoft-teams
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-onedrive
+  label: OneDrive
+  partner_name: OneDrive
+  category: File Management & Storage
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/onedrive
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: photoroom-linkedin
+  label: LinkedIn
+  partner: linkedin-ads
+  partner_name: LinkedIn
+  category: Microsoft
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/linkedin
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: photoroom-companycam
+  label: CompanyCam
+  partner: companycam
+  partner_name: CompanyCam
+  category: Images & Design
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/photoroom/integrations/companycam
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
   arazzo: null
