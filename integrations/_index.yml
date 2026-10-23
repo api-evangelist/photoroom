@@ -78,18 +78,6 @@
   relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
-- slug: photoroom-shopify-own
-  label: Shopify (own)
-  partner: shopify
-  partner_name: Shopify (own)
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://apps.shopify.com/photoroom-production
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: photoroom-zapier
   label: Zapier
   partner: zapier
@@ -495,5 +483,30 @@
       (product, store); install / listing counts are context, never counted'
     detected_by: sweep-raycast-store-extensions.py
     detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
+- slug: photoroom-shopify-own
+  label: Shopify (own)
+  partner: shopify
+  partner_name: Shopify (own)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://apps.shopify.com/photoroom-production
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: photoroom-hugging-face-hugging-face-hub
+  label: Hugging Face (hugging-face-hub)
+  partner: hugging-face
+  partner_name: Hugging Face (hugging-face-hub)
+  category: Hugging Face Hub datasets
+  type: marketplace
+  marketplace: hugging-face-hub
+  channel: partner-built
+  evidence: https://huggingface.co/Photoroom
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null

@@ -12,6 +12,7 @@ checked:
 - shopify/integrations/shopify-integration-edges.yml
 - https://github.com/raycast/extensions/tree/84f9ac51336a8c69f70974a75bc067c0feae3658/extensions
 - https://www.raycast.com/api/v1/store_listings
+- hugging-face/integrations/hugging-face-integration-edges.yml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -38,24 +39,6 @@ marketplace_apps:
   - key: PHOTOROOM_GET_ACCOUNT_USAGE
   - key: PHOTOROOM_REMOVE_BACKGROUND
 edges:
-- partner_name: Shopify (own)
-  partner: shopify
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://apps.shopify.com/photoroom-production
-  mirror_of: shopify/integrations/shopify-integration-edges.yml
-  apps:
-  - Photoroom AI Listing Assistant
-  listing_count: 1
-  detected: '2026-10-15'
-  detected_by: mirror-platform-listings.py
-  publisher_verified:
-  - Built for Shopify
 - partner_name: Zapier
   partner: zapier
   partner_match: aggregator
@@ -491,6 +474,53 @@ edges:
   detected_by: sweep-raycast-store-extensions.py
   first_seen: '2026-10-22'
   direction: partner-built
+- partner_name: Shopify (own)
+  partner: shopify
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://apps.shopify.com/photoroom-production
+  mirror_of: shopify/integrations/shopify-integration-edges.yml
+  apps:
+  - Photoroom AI Listing Assistant
+  listing_count: 1
+  detected: '2026-10-15'
+  detected_by: mirror-platform-listings.py
+  publisher_verified:
+  - Built for Shopify
+- partner_name: Hugging Face (hugging-face-hub)
+  partner: hugging-face
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: hugging-face-hub
+  evidence: https://huggingface.co/Photoroom
+  mirror_of: hugging-face/integrations/hugging-face-integration-edges.yml
+  apps:
+  - Photoroom/midjourney-v6-recap
+  - Photoroom/prxpixel-t2i
+  - Photoroom/prx-1024-t2i-beta
+  - Photoroom/prx-512-t2i-sft-distilled
+  - Photoroom/prx-512-t2i-sft
+  - Photoroom/prx-512-t2i-dc-ae-sft-distilled
+  - Photoroom/prx-256-t2i
+  - Photoroom/prx-512-t2i
+  - Photoroom/prx-256-t2i-sft
+  - Photoroom/PRX-Pixel
+  - Photoroom/PRX-1024-beta-version
+  listing_count: 3
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Hugging Face Hub datasets
+  badges:
+  - Verified publisher (Hugging Face verified organisation)
 templates:
 - title: Remove backgrounds with PhotoRoom from new Airtable records and update them
   url: https://zapier.com/apps/airtable/integrations/airtable/1163668/remove-backgrounds-with-photoroom-from-new-airtable-records-and-update-them
